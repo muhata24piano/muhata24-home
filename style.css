@@ -1,0 +1,296 @@
+/* ==========================================
+   1. 基本リセット & 全体設定
+   ========================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* スムーススクロール */
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
+  line-height: 1.7;
+  color: #333;
+  background-color: #f8f9fa;
+}
+
+/* ==========================================
+   2. ヘッダー & ナビゲーション
+   ========================================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 8%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+header h2 {
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  color: #1a202c;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.8rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #3182ce;
+}
+
+/* ==========================================
+   3. メインビジュアル (Hero Section)
+   ========================================== */
+section:nth-of-type(1) {
+  text-align: center;
+  padding: 5rem 1rem;
+  background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
+  color: #ffffff;
+}
+
+section:nth-of-type(1) h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+section:nth-of-type(1) p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* ==========================================
+   4. 各セクション共通スタイル
+   ========================================== */
+section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2d3748;
+  position: relative;
+}
+
+/* 見出しの下線アクセント */
+section h2::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #3182ce;
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* ==========================================
+   5. About Me (自己紹介 & スキル)
+   ========================================== */
+#about {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+#about h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #2b6cb0;
+}
+
+#about ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+#about li {
+  background-color: #edf2f7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #4a5568;
+}
+
+/* ==========================================
+   Link セクション（SNSアイコン横並び）
+   ========================================== */
+#link {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  margin-top: 2rem;
+}
+
+/* リスト全体を横並び（Flexbox）にする設定 */
+.sns-horizontal-list {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* 中央寄せ */
+  align-items: center;
+  gap: 1.2rem;            /* アイコン同士の間隔 */
+  flex-wrap: wrap;        /* 画面が極端に狭い時は自動で折り返す */
+  padding: 0;
+  margin: 0 auto;
+}
+
+/* 1つ1つの正方形（または円形）アイコンボタン */
+.sns-horizontal-list a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;     /* 角丸デザイン（丸くしたい場合は 50% に変更） */
+  background-color: #f8fafc;
+  color: #4a5568;
+  font-size: 1.6rem;      /* アイコンの大きさ */
+  text-decoration: none;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* ホバー時の基本動作（少し上に浮かぶ） */
+.sns-horizontal-list a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-color: transparent;
+}
+
+/* ------------------------------------------
+   各SNSのブランドカラー（ホバー時）
+   ------------------------------------------ */
+/* YouTube */
+.sns-horizontal-list a.btn-youtube:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+/* X (旧Twitter) */
+.sns-horizontal-list a.btn-x:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+/* TikTok */
+.sns-horizontal-list a.btn-tiktok:hover {
+  background-color: #000000;
+  color: #ffffff;
+  /* TikTok特有の水色と赤のうっすら影 */
+  box-shadow: -2px 2px 0 #00f2fe, 2px -2px 0 #fe2c55; 
+}
+
+/* Instagram */
+.sns-horizontal-list a.btn-insta:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  color: #ffffff;
+}
+
+/* ==========================================
+   6. Works (制作物グリッドレイアウト)
+   ========================================== */
+#works {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Works 内のカード配置用コンテナ */
+#works > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+}
+
+/* 1つ1つの作品カード */
+#works > div > div {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 1.8rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+#works > div > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+#works h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  color: #2d3748;
+}
+
+#works p {
+  font-size: 0.95rem;
+  color: #718096;
+}
+
+/* ==========================================
+   7. フッター
+   ========================================== */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #1a202c;
+  color: #a0aec0;
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+
+/* ==========================================
+   8. レスポンシブ対応 (スマホ向け)
+   ========================================== */
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  nav ul {
+    gap: 1.2rem;
+  }
+
+  section:nth-of-type(1) h1 {
+    font-size: 1.8rem;
+  }
+
+  section {
+    padding: 2.5rem 1rem;
+  }
+
+  #about {
+    padding: 2rem 1.2rem;
+  }
+}
