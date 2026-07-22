@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
   line-height: 1.7;
-  color: #333;
+  color: #ffffff;
   background-color: #ccffcc;
 }
 
@@ -122,7 +122,7 @@ section h2::after {
 }
 
 /* ==========================================
-   Link セクション（SNSアイコン横並び）
+   5.Link セクション（SNSアイコン横並び）
    ========================================== */
 #link {
   background-color: #ffffff;
@@ -197,7 +197,38 @@ section h2::after {
 }
 
 /* ==========================================
-   5. profile (自己紹介 & スキル)
+   6. Service
+   ========================================== */
+#service {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 0.7rem; 
+}
+#service h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #2b6cb0;
+}
+#service ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+#service li {
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #1b4d3e;
+}
+
+/* ==========================================
+   7. profile
    ========================================== */
 #profile {
   background-color: #ffffff;
@@ -265,37 +296,6 @@ section h2::after {
 }
 
 #profile li {
-  background-color: #e8f5e9;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: #1b4d3e;
-}
-
-/* ==========================================
-   5. Service
-   ========================================== */
-#service {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 2rem 2rem;
-  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
-  margin-top: 0.7rem; 
-}
-#service h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
-  color: #2b6cb0;
-}
-#service ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-#service li {
   background-color: #e8f5e9;
   padding: 0.5rem 1rem;
   border-radius: 20px;
