@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>muhata24のホーム</title>
-  <!-- 👇 ここから追加：OGP（URLを貼った時のカード表示設定） -->
+  <!-- OGP（URLを貼った時のカード表示設定） -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="muhata24のホーム" />
   <meta property="og:description" content="リンク集を置いています" />
@@ -16,14 +16,16 @@
   <meta name="twitter:title" content="muhata24のホーム" />
   <meta name="twitter:description" content="リンク集を置いています" />
   <meta name="twitter:image" content="https://muhata24-home.vercel.app/ogp.png" />
-  <!-- 👆 ここまで -->
+
   <link rel="stylesheet" href="style.css">
   <!-- Font Awesome (アイコン用CDN) -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
+  <!-- 画面全体を覆う真っ白な幕 -->
   <div id="page-loader"></div>
+
   <!-- 1. ヘッダー -->
   <header>
     <a href="index.html" id="home-icon">
@@ -38,22 +40,6 @@
         <li><a href="#contact">Contact</a></li> -->
       </ul>
     </nav>
-    <script>
-    // ⭕️ loadイベントを検知しているか確認
-    window.addEventListener('load', function() {
-      // ⭕️ getElementById内のIDスペルは合っているか？
-      const loader = document.getElementById('page-loader');
-      if (loader) {
-        setTimeout(function() {
-          // ⭕️ add('loaded') であるか？
-          loader.classList.add('loaded');
-        }, 200);
-      } else {
-        // IDが見つからない場合、コンソールにエラーが出ます
-        console.error("ID 'page-loader' が見つかりません。");
-      }
-    });
-  </script>
   </header>
 
   <!-- 2. メインビジュアル -->
@@ -62,70 +48,102 @@
     <p>クリエイターとしての活動場所や作品をまとめています。</p>
   </section>
 
-    <!-- 3. リンク集 -->
+  <!-- 3. リンク集 -->
   <section id="link">
-  <h2>Links</h2>
-  <div class="link-container">
-    <!-- 横並び用クラス sns-horizontal-list を指定 -->
-    <ul class="sns-horizontal-list">
-      <!-- YouTube -->
-      <li>
-        <a href="https://www.youtube.com/@muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-youtube" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-      </li>
+    <h2>Links</h2>
+    <div class="link-container">
+      <ul class="sns-horizontal-list">
+        <!-- YouTube -->
+        <li>
+          <a href="https://www.youtube.com/@muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-youtube" aria-label="YouTube">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+        </li>
 
-      <!-- X (旧Twitter) -->
-      <li>
-        <a href="https://x.com/muhata24" target="_blank" rel="noopener noreferrer" class="btn-x" aria-label="X (Twitter)">
-          <i class="fa-brands fa-x-twitter"></i>
-        </a>
-      </li>
+        <!-- X (旧Twitter) -->
+        <li>
+          <a href="https://x.com/muhata24" target="_blank" rel="noopener noreferrer" class="btn-x" aria-label="X (Twitter)">
+            <i class="fa-brands fa-x-twitter"></i>
+          </a>
+        </li>
 
-      <!-- TikTok -->
-      <li>
-        <a href="https://tiktok.com/@muhata24" target="_blank" rel="noopener noreferrer" class="btn-tiktok" aria-label="TikTok">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
-      </li>
+        <!-- TikTok -->
+        <li>
+          <a href="https://tiktok.com/@muhata24" target="_blank" rel="noopener noreferrer" class="btn-tiktok" aria-label="TikTok">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </li>
 
-      <!-- Instagram -->
-      <li>
-        <a href="https://instagram.com/muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-insta" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
-    </ul>
-  </div>
+        <!-- Instagram -->
+        <li>
+          <a href="https://instagram.com/muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-insta" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
   </section>
 
   <!-- 4. About Me (自己紹介 & スキル) -->
-<section id="about">
-  <h2>プロフィール</h2>
-  
-  <p>
-    Web制作やプログラミングをはじめ、動画編集や音楽制作、3Dモデリングなど多岐にわたるデジタルコンテンツの制作を行っています。<br>
-    自動化や効率化を図りながら、クオリティの高いモノづくりを目指して活動中です。
-  </p>
+  <section id="about">
+    <h2>プロフィール</h2>
+    
+    <p>
+      Web制作やプログラミングをはじめ、動画編集や音楽制作、3Dモデリングなど多岐にわたるデジタルコンテンツの制作を行っています。<br>
+      自動化や効率化を図りながら、クオリティの高いモノづくりを目指して活動中です。
+    </p>
 
-  <h3>Skills & Tools</h3>
-  <ul>
-    <li>Cubase Pro</li>
-    <li>AviUtl</li>
-    <li>Unity</li>
-    <li>OBS Studio</li>
-    <li>HTML5 / CSS3</li>
-    <li>JavaScript</li>
-    <li>Python</li>
-    <li>C / C++</li>
-    <li>Git / GitHub</li>
-  </ul>
-</section>
+    <h3>Skills & Tools</h3>
+    <ul>
+      <li>Cubase Pro</li>
+      <li>AviUtl</li>
+      <li>Unity</li>
+      <li>OBS Studio</li>
+      <li>HTML5 / CSS3</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>C / C++</li>
+      <li>Git / GitHub</li>
+    </ul>
+  </section>
 
   <!-- 5. フッター -->
   <footer>
     <p>&copy; 2026 My Portfolio. All rights reserved.</p>
   </footer>
+
+  <!-- ==========================================
+       JavaScript（画面制御）
+       ========================================== -->
+  <script>
+    // ① ページ読み込み完了時：白幕を透明（フェードアウト）にする
+    window.addEventListener('load', function() {
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        setTimeout(function() {
+          loader.classList.add('loaded');
+        }, 150); // 0.15秒待ってからフェードアウト
+      }
+    });
+
+    // ② ロゴ（アイコン）クリック時：画面を真っ白に戻してからリロードする
+    const homeIcon = document.getElementById('home-icon');
+    if (homeIcon) {
+      homeIcon.addEventListener('click', function(e) {
+        e.preventDefault(); // 通常の移動をキャンセル
+        
+        const loader = document.getElementById('page-loader');
+        if (loader) {
+          loader.classList.remove('loaded'); // 白幕を復活（画面を白くする）
+        }
+        
+        // 白くなったのを確認してからリロードを実行
+        setTimeout(function() {
+          window.location.reload();
+        }, 200);
+      });
+    }
+  </script>
 
 </body>
 </html>
