@@ -196,7 +196,7 @@ section h2::after {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1.5rem; /* 💡 ボタン同士のすき間も少し広く (1.2rem -> 1.5rem) */
   flex-wrap: wrap;
   padding: 0;
   margin: 0 auto;
@@ -206,22 +206,26 @@ section h2::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
+  /* 💡 アイコン枠を 56px から 68px に拡大 */
+  width: 68px;
+  height: 68px;
+  border-radius: 18px; /* 💡 枠の角丸も少し大きめに調整 */
   background-color: #f8fafc;
   color: #4a5568;
-  font-size: 1.6rem;
+  /* 💡 アイコン自体の文字サイズを 1.6rem から 2.1rem に拡大 */
+  font-size: 2.1rem;
   text-decoration: none;
   border: 1px solid #e2e8f0;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .sns-horizontal-list a:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px); /* 💡 ホバー時の浮き上がり感を少しアップ */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
   border-color: transparent;
 }
+
+/* （以下、各SNSの hover 色の設定はそのまま） */
 
 .sns-horizontal-list a.btn-youtube:hover {
   background-color: #ff0000;
