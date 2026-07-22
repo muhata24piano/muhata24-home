@@ -120,39 +120,6 @@ section h2::after {
 }
 
 /* ==========================================
-   5. About Me (自己紹介 & スキル)
-   ========================================== */
-#about {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 2rem 2rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  margin-top: 0.7rem; 
-}
-
-#about h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
-  color: #2b6cb0;
-}
-
-#about ul {
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem;
-}
-
-#about li {
-  background-color: #edf2f7;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  color: #4a5568;
-}
-
-/* ==========================================
    Link セクション（SNSアイコン横並び）
    ========================================== */
 #link {
@@ -228,57 +195,36 @@ section h2::after {
 }
 
 /* ==========================================
-   6. Works (制作物グリッドレイアウト)
+   5. About Me (自己紹介 & スキル)
    ========================================== */
-#works {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Works 内のカード配置用コンテナ */
-#works > div {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.8rem;
-  width: 100%;
-}
-
-/* 1つ1つの作品カード */
-#works > div > div {
-  background: #ffffff;
-  border-radius: 10px;
-  padding: 1.8rem;
+#about {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border: 1px solid #e2e8f0;
+  margin-top: 0.7rem; 
 }
 
-#works > div > div:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-}
-
-#works h3 {
+#about h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
   font-size: 1.2rem;
-  margin-bottom: 0.6rem;
-  color: #2d3748;
+  color: #2b6cb0;
 }
 
-#works p {
-  font-size: 0.95rem;
-  color: #718096;
+#about ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
 }
 
-/* ==========================================
-   7. フッター
-   ========================================== */
-footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  background-color: #1a202c;
-  color: #a0aec0;
-  font-size: 0.85rem;
-  margin-top: 4rem;
+#about li {
+  background-color: #edf2f7;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #4a5568;
 }
 
 /* ==========================================
