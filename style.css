@@ -216,37 +216,45 @@ section h2::after {
 
 /* プロフィールリスト全体 */
 .profile-list {
-  max-width: 300px;     /* 全体の横幅（お好みで調整） */
-  margin: 0 auto;       /* セクション内で中央寄せ */
+  max-width: 360px;     /* リスト全体の横幅（画面に合わせて調整可） */
+  margin: 0 auto;       /* カード内で中央寄せ */
   text-align: left;
 }
 
-/* 1行分のレイアウト */
+/* 1行分のレイアウト（Flexbox） */
 .profile-item {
   display: flex;
+  align-items: center;  /* 縦方向のラインを揃える */
   margin-bottom: 0.8rem;
   font-size: 1rem;
 }
 
 /* 項目名（活動名、生年月日など） */
 .profile-item dt {
-  width: 100px;         /* 👈 項目名の幅を固定（これでコロンの位置が揃います） */
+  width: 90px;          /* 👈 1. 項目名エリアの幅を一定に固定 */
   font-weight: bold;
+  text-align: justify;  /* 💡 2〜4文字の文字間隔を揃えて見た目を美しく */
+  text-justify: inter-character;
   position: relative;
-  padding-right: 20px;  /* コロンとのすき間 */
+  padding-right: 20px;  /* コロン用のスペースを確保 */
 }
 
-/* 項目名の後ろに自動で「：」を置く */
+/* 💡 コロン（：）を完全中央に固定する処理 */
 .profile-item dt::after {
   content: "：";
   position: absolute;
-  right: 5px;           /* 👈 右端にピタッと配置して揃える */
+  right: 0;             /* 右端に配置 */
+  top: 0;
+  width: 20px;          /* 👈 コロン専用の幅を確保 */
+  text-align: center;   /* 👈 コロンをその幅の中でぴったり中央寄せ */
+  font-weight: normal;  /* コロンは太字にしない（お好みで） */
 }
 
 /* 値（ムハタ24、2004年...など） */
 .profile-item dd {
-  flex: 1;
+  flex: 1;              /* 残りの幅をすべて使う */
   margin: 0;
+  padding-left: 10px;   /* コロンからのすき間 */
 }
 
 #about ul {
