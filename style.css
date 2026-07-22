@@ -8,18 +8,17 @@
 }
 
 html {
-  scroll-behavior: smooth; /* スムーススクロール */
+  scroll-behavior: smooth;
 }
-/* ==========================================
-   ページ内リンク（目次）の飛び先位置調整
-   ========================================== */
+
 section, 
 div[id] {
-  /* 💡 ヘッダーの高さ＋少しの余白分だけ上方向にズラしてスクロールを止める */
   scroll-margin-top: 92px; 
 }
+
+/* 全体のフォントを Noto Serif JP に設定 */
 body {
-  font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif,'Noto Serif JP';
+  font-family: 'Noto Serif JP', 'Times New Roman', serif;
   line-height: 1.7;
   color: #002200;
   background-color: #f1fff1;
@@ -32,7 +31,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.8rem 5%;
+  padding: 1rem 5%;
   background-color: #008000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -40,12 +39,13 @@ header {
   z-index: 100;
 }
 
-header h1 {
-  font-family: 'Shippori Mincho', serif; /* ご希望のフォント */
+/* ヘッダーのタイトルのみ Shippori Mincho を適用 */
+.header-title {
+  font-family: 'Shippori Mincho', serif;
   font-weight: 700;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   color: #f8fff8;
-  text-align: center;
 }
 
 nav ul {
@@ -63,42 +63,42 @@ nav a {
 }
 
 nav a:hover {
-  color: #3182ce;
-}
-/* ホバー（マウスを乗せた時）のちょっとした演出 */
-.header-logo:hover {
-  opacity: 0.8; /* ほんのり透明にする */
+  color: #a8ffb2;
 }
 
-/* 画像を使う場合 */
 .header-logo {
-  width: 50px;         /* 幅（お好みのサイズに調整してください） */
-  height: 50px;        /* 高さ（幅と同じ数値にして正方形にする） */
-  border-radius: 50%;  /* 完全な丸にする */
-  object-fit: cover;   /* 画像が歪まないように中央で綺麗に切り抜く */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
   vertical-align: middle;
+  transition: opacity 0.3s;
+}
+
+.header-logo:hover {
+  opacity: 0.8;
 }
 
 /* ==========================================
    3. メインビジュアル (Hero Section)
    ========================================== */
-section:nth-of-type(1) {
+.hero-section {
   text-align: center;
-  padding: 2rem 1rem;
-  /* 深い緑から少し鮮やかな緑への美しいグラデーション */
+  padding: 3rem 1rem;
   background: linear-gradient(135deg, #1b4d3e 0%, #2d6a4f 100%);
   color: #ffffff;
-  border-radius: 0 0 20px 20px; /* 下の角を少し丸くしておしゃれに */
+  border-radius: 0 0 20px 20px;
 }
 
-section:nth-of-type(1) h1 {
-  font-size: 2.5rem;
+.hero-section h1 {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 2.2rem;
   margin-bottom: 0.8rem;
   font-weight: 700;
 }
 
-section:nth-of-type(1) p {
-  font-size: 1.1rem;
+.hero-section p {
+  font-size: 1rem;
   opacity: 0.9;
 }
 
@@ -108,10 +108,11 @@ section:nth-of-type(1) p {
 section {
   max-width: 960px;
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1.5rem;
 }
 
 section h2 {
+  font-family: 'Shippori Mincho', serif;
   font-size: 1.6rem;
   text-align: center;
   margin-bottom: 1rem;
@@ -119,7 +120,6 @@ section h2 {
   position: relative;
 }
 
-/* 見出しの下線アクセント */
 section h2::after {
   content: '';
   display: block;
@@ -131,75 +131,59 @@ section h2::after {
 }
 
 /* ==========================================
-   5.Link セクション（SNSアイコン横並び）
+   5. Link セクション
    ========================================== */
 #link {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 1rem 2rem;
-  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
-  margin-top: 0.7rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
 }
 
-/* リスト全体を横並び（Flexbox）にする設定 */
 .sns-horizontal-list {
   list-style: none;
   display: flex;
-  justify-content: center; /* 中央寄せ */
+  justify-content: center;
   align-items: center;
-  gap: 1.2rem;            /* アイコン同士の間隔 */
-  flex-wrap: wrap;        /* 画面が極端に狭い時は自動で折り返す */
+  gap: 1.2rem;
+  flex-wrap: wrap;
   padding: 0;
   margin: 0 auto;
 }
 
-/* 1つ1つの正方形（または円形）アイコンボタン */
 .sns-horizontal-list a {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 56px;
   height: 56px;
-  border-radius: 14px;     /* 角丸デザイン（丸くしたい場合は 50% に変更） */
+  border-radius: 14px;
   background-color: #f8fafc;
   color: #4a5568;
-  font-size: 1.6rem;      /* アイコンの大きさ */
+  font-size: 1.6rem;
   text-decoration: none;
   border: 1px solid #e2e8f0;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-/* ホバー時の基本動作（少し上に浮かぶ） */
 .sns-horizontal-list a:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   border-color: transparent;
 }
 
-/* 各SNSのブランドカラー（ホバー時） */
-/* YouTube */
-.sns-horizontal-list a.btn-youtube:hover {
-  background-color: #ff0000;
-  color: #ffffff;
-}
-/* X (旧Twitter) */
-.sns-horizontal-list a.btn-x:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-/* TikTok */
+.sns-horizontal-list a.btn-youtube:hover { background-color: #ff0000; color: #ffffff; }
+.sns-horizontal-list a.btn-x:hover { background-color: #000000; color: #ffffff; }
 .sns-horizontal-list a.btn-tiktok:hover {
   background-color: #000000;
   color: #ffffff;
-  /* TikTok特有の水色と赤のうっすら影 */
   box-shadow: -2px 2px 0 #00f2fe, 2px -2px 0 #fe2c55; 
 }
-/* Instagram */
 .sns-horizontal-list a.btn-insta:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #ffffff;
 }
-/* narasu */
 .sns-horizontal-list a.btn-narasu:hover {
   background: linear-gradient(45deg, #f94a97 0%, #d63ab7 25%, #a238ae 50%, #7367dd 75%, #4497fb 100%);
   color: #ffffff;
@@ -211,21 +195,17 @@ section h2::after {
 #service {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 2rem 2rem;
-  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
-  margin-top: 0.7rem; 
+  padding: 2rem;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem; 
 }
-#service h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.8rem;
-  font-size: 1.2rem;
-  color: #2b6cb0;
-}
+
 #service ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  justify-content: center;
 }
 
 #service li {
@@ -237,64 +217,60 @@ section h2::after {
 }
 
 /* ==========================================
-   7. profile
+   7. Profile
    ========================================== */
 #profile {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 2rem 2rem;
-  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
-  margin-top: 0.7rem; 
+  padding: 2rem;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
+  margin-top: 1rem; 
 }
 
 #profile h3 {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
   color: #1b773e;
+  text-align: center;
 }
 
-/* プロフィールリスト全体 */
 .profile-list {
-  max-width: 360px;     /* リスト全体の横幅（画面に合わせて調整可） */
-  margin: 0 auto;       /* カード内で中央寄せ */
+  max-width: 360px;
+  margin: 0 auto;
   text-align: left;
 }
 
-/* 1行分のレイアウト（Flexbox） */
 .profile-item {
   display: flex;
-  align-items: center;  /* 縦方向のラインを揃える */
+  align-items: center;
   margin-bottom: 0.8rem;
   font-size: 1rem;
 }
 
-/* 項目名（活動名、生年月日など） */
 .profile-item dt {
-  width: 90px;          /* 👈 1. 項目名エリアの幅を一定に固定 */
+  width: 90px;
   font-weight: bold;
-  text-align: justify;  /* 💡 2〜4文字の文字間隔を揃えて見た目を美しく */
+  text-align: justify;
   text-justify: inter-character;
   position: relative;
-  padding-right: 20px;  /* コロン用のスペースを確保 */
+  padding-right: 20px;
 }
 
-/* 💡 コロン（：）を完全中央に固定する処理 */
 .profile-item dt::after {
   content: "：";
   position: absolute;
-  right: 0;             /* 右端に配置 */
+  right: 0;
   top: 0;
-  width: 20px;          /* 👈 コロン専用の幅を確保 */
-  text-align: center;   /* 👈 コロンをその幅の中でぴったり中央寄せ */
-  font-weight: normal;  /* コロンは太字にしない（お好みで） */
+  width: 20px;
+  text-align: center;
+  font-weight: normal;
 }
 
-/* 値（ムハタ24、2004年...など） */
 .profile-item dd {
-  flex: 1;              /* 残りの幅をすべて使う */
+  flex: 1;
   margin: 0;
-  padding-left: 10px;   /* コロンからのすき間 */
+  padding-left: 10px;
 }
 
 #profile ul {
@@ -302,6 +278,7 @@ section h2::after {
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
+  justify-content: center;
 }
 
 #profile li {
@@ -313,20 +290,18 @@ section h2::after {
 }
 
 /* ==========================================
-   7. フッター (緑ベースで洗練されたデザイン)
+   8. フッター
    ========================================== */
 footer {
   text-align: center;
   padding: 1.5rem 1rem;
-  background-color: #112a22; /* ヘッダーより一重深い「ダークフォレストグリーン」 */
-  color: #a3b8b0;            /* 目に優しい少し緑みがかったライトグレー */
+  background-color: #112a22;
+  color: #a3b8b0;
   font-size: 0.85rem;
-  margin-top: 1rem;
-  border-top: 3rem solid transparent; /* グラデーション境界用 */
+  margin-top: 2rem;
   position: relative;
 }
 
-/* （おまけ）フッター上部にアクセント線を入れる */
 footer::before {
   content: '';
   position: absolute;
@@ -334,15 +309,11 @@ footer::before {
   left: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(90deg, #1b4d3e, #52b788, #1b4d3e); /* 緑の繊細なグラデーション線 */
-}
-
-footer p {
-  letter-spacing: 0.5px;
+  background: linear-gradient(90deg, #1b4d3e, #52b788, #1b4d3e);
 }
 
 /* ==========================================
-   8. レスポンシブ対応 (スマホ向け)
+   9. レスポンシブ対応 (スマホ)
    ========================================== */
 @media (max-width: 600px) {
   header {
@@ -355,38 +326,32 @@ footer p {
     gap: 1.2rem;
   }
 
-  section:nth-of-type(1) h1 {
-    font-size: 1.8rem;
+  .hero-section h1 {
+    font-size: 1.6rem;
   }
 
   section {
-    padding: 2.5rem 1rem;
-  }
-
-  #about {
-    padding: 2rem 1.2rem;
+    padding: 1.5rem 1rem;
   }
 }
-/* ==========================================
-   9. リロード時のフェードイン演出
-   ========================================== */
 
-/* ページ全体を覆う真っ白な幕 */
+/* ==========================================
+   10. ローダー
+   ========================================== */
 #page-loader {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff; /* 完全な白 */
-  z-index: 9999;           /* 全ての要素（ヘッダー含む）の上に配置 */
-  opacity: 1;              /* 初期状態は不透明 */
+  background-color: #ffffff;
+  z-index: 9999;
+  opacity: 1;
   visibility: visible;
-  transition: opacity 0.5s ease, visibility 0.5s ease; /* 0.5秒かけて変化 */
+  transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
-/* 読み込み完了後にJSで付与するクラス（フェードアウトさせる） */
 #page-loader.loaded {
-  opacity: 0;              /* 透明にする */
-  visibility: hidden;      /* クリックなどを通すようにする */
+  opacity: 0;
+  visibility: hidden;
 }
