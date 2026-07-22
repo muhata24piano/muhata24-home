@@ -34,6 +34,15 @@
         <li><a href="#contact">Contact</a></li> -->
       </ul>
     </nav>
+    <script>
+  document.getElementById('home-icon').addEventListener('click', function(e) {
+    e.preventDefault(); // デフォルトの動き（#への瞬時ジャンプ）を防止
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // スムーススクロール（滑らかに上に戻る）
+    });
+  });
+</script>
   </header>
 
   <!-- 2. メインビジュアル -->
