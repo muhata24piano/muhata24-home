@@ -167,21 +167,17 @@ section h2::after {
   border-color: transparent;
 }
 
-/* ------------------------------------------
-   各SNSのブランドカラー（ホバー時）
-   ------------------------------------------ */
+/* 各SNSのブランドカラー（ホバー時） */
 /* YouTube */
 .sns-horizontal-list a.btn-youtube:hover {
   background-color: #ff0000;
   color: #ffffff;
 }
-
 /* X (旧Twitter) */
 .sns-horizontal-list a.btn-x:hover {
   background-color: #000000;
   color: #ffffff;
 }
-
 /* TikTok */
 .sns-horizontal-list a.btn-tiktok:hover {
   background-color: #000000;
@@ -189,7 +185,6 @@ section h2::after {
   /* TikTok特有の水色と赤のうっすら影 */
   box-shadow: -2px 2px 0 #00f2fe, 2px -2px 0 #fe2c55; 
 }
-
 /* Instagram */
 .sns-horizontal-list a.btn-insta:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
@@ -229,8 +224,33 @@ section h2::after {
   color: #1b4d3e;
 }
 
+/* ==========================================
+   7. フッター (緑ベースで洗練されたデザイン)
+   ========================================== */
 footer {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+  background-color: #112a22; /* ヘッダーより一重深い「ダークフォレストグリーン」 */
+  color: #a3b8b0;            /* 目に優しい少し緑みがかったライトグレー */
+  font-size: 0.85rem;
+  margin-top: 5rem;
+  border-top: 3rem solid transparent; /* グラデーション境界用 */
+  position: relative;
+}
 
+/* （おまけ）フッター上部にアクセント線を入れる */
+footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #1b4d3e, #52b788, #1b4d3e); /* 緑の繊細なグラデーション線 */
+}
+
+footer p {
+  letter-spacing: 0.5px;
 }
 
 /* ==========================================
