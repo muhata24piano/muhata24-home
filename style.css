@@ -127,7 +127,7 @@ section h2::after {
   border-radius: 12px;
   padding: 2rem 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  margin-top: 0.5rem; 
+  margin-top: 0.7rem; 
 }
 
 #about h3 {
@@ -160,7 +160,7 @@ section h2::after {
   border-radius: 12px;
   padding: 2rem 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  margin-top: 1rem;
+  margin-top: 0.7rem;
 }
 
 /* リスト全体を横並び（Flexbox）にする設定 */
