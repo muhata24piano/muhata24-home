@@ -67,6 +67,7 @@ nav a:hover {
   width: auto;       /* 縦横比を崩さない */
   object-fit: contain;
   vertical-align: middle;
+  border-radius: 50%;
 }
 
 /* ==========================================
