@@ -245,7 +245,7 @@ footer::before {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 0.5px;
   background: linear-gradient(90deg, #1b4d3e, #52b788, #1b4d3e); /* 緑の繊細なグラデーション線 */
 }
 
