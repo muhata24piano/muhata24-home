@@ -125,13 +125,13 @@ section h2::after {
 #about {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 #about h3 {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
   color: #2b6cb0;
