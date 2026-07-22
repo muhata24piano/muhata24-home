@@ -39,14 +39,19 @@
       </ul>
     </nav>
     <script>
-    document.getElementById('home-icon').addEventListener('click', function(e) {
-      e.preventDefault();
-      // 画面を白く戻す（幕を表示）
-      document.getElementById('page-loader').classList.remove('loaded');
-      // 少し待ってからリロード（白さを体感させるため）
-      setTimeout(function() {
-        window.location.reload();
-      }, 100);
+    // ⭕️ loadイベントを検知しているか確認
+    window.addEventListener('load', function() {
+      // ⭕️ getElementById内のIDスペルは合っているか？
+      const loader = document.getElementById('page-loader');
+      if (loader) {
+        setTimeout(function() {
+          // ⭕️ add('loaded') であるか？
+          loader.classList.add('loaded');
+        }, 200);
+      } else {
+        // IDが見つからない場合、コンソールにエラーが出ます
+        console.error("ID 'page-loader' が見つかりません。");
+      }
     });
   </script>
   </header>
