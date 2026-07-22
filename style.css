@@ -15,7 +15,7 @@ body {
   font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
   line-height: 1.7;
   color: #333;
-  background-color: #f8f9fa;
+  background-color: #f5f5f5;
 }
 
 /* ==========================================
@@ -103,7 +103,7 @@ section {
 section h2 {
   font-size: 1.8rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #2d3748;
   position: relative;
 }
