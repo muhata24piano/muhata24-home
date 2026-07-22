@@ -42,8 +42,8 @@ header {
 /* ヘッダーのタイトルのみ Shippori Mincho を適用 */
 .header-title {
   font-family: 'Shippori Mincho', serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 1000;
+  font-size: 1.5rem;
   letter-spacing: 1px;
   color: #f8fff8;
 }
