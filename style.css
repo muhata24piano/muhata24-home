@@ -230,7 +230,7 @@ section h2::after {
 
 /* 項目名（活動名、生年月日など） */
 .profile-item dt {
-  width: 100px;         /* 👈 項目名の幅を固定（これでコロンの位置が揃います） */
+  width: 150px;         /* 👈 項目名の幅を固定（これでコロンの位置が揃います） */
   font-weight: bold;
   position: relative;
   padding-right: 20px;  /* コロンとのすき間 */
