@@ -353,7 +353,7 @@ footer::before {
     font-size: 1.1rem; /* スマホ用に少し文字サイズを調整 */
     text-align: left;
     flex: 10; /* ロゴの横のスペースを埋める */
-    margin-left: 0.8rem; /* ロゴとの間のすき間 */
+    margin-left: 0rem; /* ロゴとの間のすき間 */
   }
 
   /* ナビゲーション（Link, Service, Profile）を2行目に中央配置 */
