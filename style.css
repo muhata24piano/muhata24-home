@@ -33,10 +33,10 @@ header {
   z-index: 100;
 }
 
-header h2 {
+header h1 {
   font-size: 1.3rem;
   letter-spacing: 1px;
-  color: #ffffff;
+  color: #f8f9fa;
 }
 
 nav ul {
