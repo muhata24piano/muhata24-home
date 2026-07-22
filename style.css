@@ -214,6 +214,41 @@ section h2::after {
   color: #2b6cb0;
 }
 
+/* プロフィールリスト全体 */
+.profile-list {
+  max-width: 400px;     /* 全体の横幅（お好みで調整） */
+  margin: 0 auto;       /* セクション内で中央寄せ */
+  text-align: left;
+}
+
+/* 1行分のレイアウト */
+.profile-item {
+  display: flex;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+}
+
+/* 項目名（活動名、生年月日など） */
+.profile-item dt {
+  width: 100px;         /* 👈 項目名の幅を固定（これでコロンの位置が揃います） */
+  font-weight: bold;
+  position: relative;
+  padding-right: 20px;  /* コロンとのすき間 */
+}
+
+/* 項目名の後ろに自動で「：」を置く */
+.profile-item dt::after {
+  content: "：";
+  position: absolute;
+  right: 5px;           /* 👈 右端にピタッと配置して揃える */
+}
+
+/* 値（ムハタ24、2004年...など） */
+.profile-item dd {
+  flex: 1;
+  margin: 0;
+}
+
 #about ul {
   list-style: none;
   display: flex;
