@@ -1,189 +1,226 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ムハタ24のホーム</title>
-  <!-- OGP（URLを貼った時のカード表示設定） -->
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="ムハタ24のホーム" />
-  <meta property="og:description" content="リンク集を置いています" />
-  <meta property="og:url" content="https://muhata24-home.vercel.app" />
-  <meta property="og:image" content="https://muhata24-home.vercel.app/ogp.png" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ムハタ24のホーム</title>
+    <!-- OGP（URLを貼った時のカード表示設定） -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ムハタ24のホーム" />
+    <meta property="og:description" content="リンク集を置いています" />
+    <meta property="og:url" content="https://muhata24-home.vercel.app" />
+    <meta
+      property="og:image"
+      content="https://muhata24-home.vercel.app/ogp.png"
+    />
 
-  <!-- Twitter / X 用の設定 -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ムハタ24のホーム" />
-  <meta name="twitter:description" content="リンク集を置いています" />
-  <meta name="twitter:image" content="https://muhata24-home.vercel.app/ogp.png" />
+    <!-- Twitter / X 用の設定 -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ムハタ24のホーム" />
+    <meta name="twitter:description" content="リンク集を置いています" />
+    <meta
+      name="twitter:image"
+      content="https://muhata24-home.vercel.app/ogp.png"
+    />
 
-  <link rel="stylesheet" href="style.css">
-  <!-- Font Awesome (アイコン用CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font Awesome (アイコン用CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
-  <!-- 画面全体を覆う真っ白な幕 -->
-  <div id="page-loader"></div>
+  <body>
+    <!-- 画面全体を覆う真っ白な幕 -->
+    <div id="page-loader"></div>
 
-  <!-- 1. ヘッダー -->
-  <header>
-    <a href="index.html" id="home-icon">
-      <img src="logo.jpg" alt="ホームへ戻るロゴ" class="header-logo">
-    </a>
-    <h1>ムハタ24のホーム</h1>
-    <nav>
+    <!-- 1. ヘッダー -->
+    <header>
+      <a href="index.html" id="home-icon">
+        <img src="logo.jpg" alt="ホームへ戻るロゴ" class="header-logo" />
+      </a>
+      <h1>ムハタ24のホーム</h1>
+      <nav>
+        <ul>
+          <li><a href="#link">Link</a></li>
+          <li><a href="#profile">Profile</a></li>
+          <li><a href="#service">Service</a></li>
+          <!--<li><a href="#contact">Contact</a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <!-- 2. メインビジュアル -->
+    <section>
+      <h1>Welcome to My Activity Site</h1>
+      <p>クリエイターとしての活動場所や作品をまとめています。</p>
+    </section>
+
+    <!-- 3. リンク集 -->
+    <section id="link">
+      <h2>Links</h2>
+      <div class="link-container">
+        <ul class="sns-horizontal-list">
+          <!-- YouTube -->
+          <li>
+            <a
+              href="https://www.youtube.com/@muhata24piano"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-youtube"
+              aria-label="YouTube"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+
+          <!-- X (旧Twitter) -->
+          <li>
+            <a
+              href="https://x.com/muhata24"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-x"
+              aria-label="X (Twitter)"
+            >
+              <i class="fa-brands fa-x-twitter"></i>
+            </a>
+          </li>
+
+          <!-- TikTok -->
+          <li>
+            <a
+              href="https://tiktok.com/@muhata24"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-tiktok"
+              aria-label="TikTok"
+            >
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </li>
+
+          <!-- Instagram -->
+          <li>
+            <a
+              href="https://instagram.com/muhata24piano"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-insta"
+              aria-label="Instagram"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+
+          <!-- narasu -->
+          <li>
+            <a
+              href="https://narasu.jp/client/static/artists/25810"
+              target="_blank"
+              rel="noopener norefeffer"
+              class="btn-narasu"
+              aria-label="narasu"
+            >
+              <i class="fa-solid fa-music"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- <p> href="https://narasu.jp/client/static/artists/25810"</p> -->
+    </section>
+
+    <!-- 4. About Me (自己紹介 & スキル) -->
+    <section id="profile">
+      <h2>プロフィール</h2>
+      <dl class="profile-list">
+        <div class="profile-item">
+          <dt>活動名</dt>
+          <dd>ムハタ24</dd>
+        </div>
+        <div class="profile-item">
+          <dt>生年月日</dt>
+          <dd>2004年5月29日</dd>
+        </div>
+        <div class="profile-item">
+          <dt>性別</dt>
+          <dd>男</dd>
+        </div>
+        <div class="profile-item">
+          <dt>職業</dt>
+          <dd>作曲家兼ピアニスト</dd>
+        </div>
+      </dl>
+      <h3>Skill & Tools</h3>
       <ul>
-        <!-- <li><a href="#link">Link</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#works">Works</a></li>
-        <li><a href="#contact">Contact</a></li> -->
+        <li>Cubase Pro</li>
+        <li>MuseScore</li>
+        <li>AviUtl</li>
+        <li>Unity</li>
+        <li>OBS Studio</li>
+        <li>HTML5 / CSS3</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>C / C++</li>
+        <li>Git / GitHub</li>
       </ul>
-    </nav>
-  </header>
+    </section>
 
-  <!-- 2. メインビジュアル -->
-  <section>
-    <h1>Welcome to My Activity Site</h1>
-    <p>クリエイターとしての活動場所や作品をまとめています。</p>
-  </section>
-
-  <!-- 3. リンク集 -->
-  <section id="link">
-    <h2>Links</h2>
-    <div class="link-container">
-      <ul class="sns-horizontal-list">
-        <!-- YouTube -->
-        <li>
-          <a href="https://www.youtube.com/@muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-youtube" aria-label="YouTube">
-            <i class="fa-brands fa-youtube"></i>
-          </a>
-        </li>
-
-        <!-- X (旧Twitter) -->
-        <li>
-          <a href="https://x.com/muhata24" target="_blank" rel="noopener noreferrer" class="btn-x" aria-label="X (Twitter)">
-            <i class="fa-brands fa-x-twitter"></i>
-          </a>
-        </li>
-
-        <!-- TikTok -->
-        <li>
-          <a href="https://tiktok.com/@muhata24" target="_blank" rel="noopener noreferrer" class="btn-tiktok" aria-label="TikTok">
-            <i class="fa-brands fa-tiktok"></i>
-          </a>
-        </li>
-
-        <!-- Instagram -->
-        <li>
-          <a href="https://instagram.com/muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-insta" aria-label="Instagram">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </li>
-
-        <!-- narasu -->
-         <li>
-          <a href="https://narasu.jp/client/static/artists/25810" target="_blank" rel="noopener norefeffer" class="btn-narasu" aria-label="narasu">
-            <i class="fa-solid fa-music"></i>
-          </a>
-         </li>
+    <section id="service">
+      <h3>サービス一覧</h3>
+      <ul>
+        <li>作曲</li>
+        <li>編曲</li>
+        <li>楽譜制作</li>
+        <li>offvocal音源制作</li>
+        <li>歌ってみたMix</li>
+        <li>歌ってみた音源制作</li>
+        <li>音楽・劇伴の「再現音源」制作</li>
+        <li>効果音・SE制作</li>
+        <li>ピッチ修正</li>
+        <li>ライブ・コンサート出演</li>
+        <li>レコーディング演奏</li>
+        <li>伴奏・アンサンブル</li>
       </ul>
-    </div>
-    <!-- <p> href="https://narasu.jp/client/static/artists/25810"</p> -->
-  </section>
+    </section>
 
-  <!-- 4. About Me (自己紹介 & スキル) -->
-  <section id="about">
-    <h2>プロフィール</h2>
-    
-    <dl class="profile-list">
-  <div class="profile-item">
-    <dt>活動名</dt>
-    <dd>ムハタ24</dd>
-  </div>
-  <div class="profile-item">
-    <dt>生年月日</dt>
-    <dd>2004年5月29日</dd>
-  </div>
-  <div class="profile-item">
-    <dt>性別</dt>
-    <dd>男</dd>
-  </div>
-  <div class="profile-item">
-    <dt>職業</dt>
-    <dd>作曲家兼ピアニスト</dd>
-  </div>
-</dl>
-      
+    <!-- 5. フッター -->
+    <footer>
+      <p>&copy; 2026 muhata24. All rights reserved.</p>
+    </footer>
 
-    <h3>サービス一覧</h3>
-    <ul>
-      <li>作曲</li>
-      <li>編曲</li>
-      <li>楽譜制作</li>
-      <li>offvocal音源制作</li>
-      <li>歌ってみたMix</li>
-      <li>歌ってみた音源制作</li>
-      <li>音楽・劇伴の「再現音源」制作</li>
-      <li>効果音・SE制作</li>
-      <li>ピッチ修正</li>
-      <li>ライブ・コンサート出演</li>
-      <li>レコーディング演奏</li>
-      <li>伴奏・アンサンブル</li>
-    </ul>
-
-    <h3>Skill & Tools</h3>
-    <ul>
-      <li>Cubase Pro</li>
-      <li>MuseScore</li>
-      <li>AviUtl</li>
-      <li>Unity</li>
-      <li>OBS Studio</li>
-      <li>HTML5 / CSS3</li>
-      <li>JavaScript</li>
-      <li>Python</li>
-      <li>C / C++</li>
-      <li>Git / GitHub</li>
-    </ul>
-  </section>
-
-  <!-- 5. フッター -->
- <footer>
-    <p>&copy; 2026 muhata24. All rights reserved.</p>
-</footer>
-
-  <!-- ==========================================
+    <!-- ==========================================
        JavaScript（画面制御）
        ========================================== -->
-  <script>
-    // ① ページ読み込み完了時：白幕を透明（フェードアウト）にする
-    window.addEventListener('load', function() {
-      const loader = document.getElementById('page-loader');
-      if (loader) {
-        setTimeout(function() {
-          loader.classList.add('loaded');
-        }, 150); // 0.15秒待ってからフェードアウト
-      }
-    });
-
-    // ② ロゴ（アイコン）クリック時：画面を真っ白に戻してからリロードする
-    const homeIcon = document.getElementById('home-icon');
-    if (homeIcon) {
-      homeIcon.addEventListener('click', function(e) {
-        e.preventDefault(); // 通常の移動をキャンセル
-        
-        const loader = document.getElementById('page-loader');
+    <script>
+      // ① ページ読み込み完了時：白幕を透明（フェードアウト）にする
+      window.addEventListener("load", function () {
+        const loader = document.getElementById("page-loader");
         if (loader) {
-          loader.classList.remove('loaded'); // 白幕を復活（画面を白くする）
+          setTimeout(function () {
+            loader.classList.add("loaded");
+          }, 150); // 0.15秒待ってからフェードアウト
         }
-        
-        // 白くなったのを確認してからリロードを実行
-        setTimeout(function() {
-          window.location.reload();
-        }, 200);
       });
-    }
-  </script>
 
-</body>
+      // ② ロゴ（アイコン）クリック時：画面を真っ白に戻してからリロードする
+      const homeIcon = document.getElementById("home-icon");
+      if (homeIcon) {
+        homeIcon.addEventListener("click", function (e) {
+          e.preventDefault(); // 通常の移動をキャンセル
+
+          const loader = document.getElementById("page-loader");
+          if (loader) {
+            loader.classList.remove("loaded"); // 白幕を復活（画面を白くする）
+          }
+
+          // 白くなったのを確認してからリロードを実行
+          setTimeout(function () {
+            window.location.reload();
+          }, 200);
+        });
+      }
+    </script>
+  </body>
 </html>

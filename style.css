@@ -199,7 +199,7 @@ section h2::after {
 /* ==========================================
    5. About Me (自己紹介 & スキル)
    ========================================== */
-#about {
+#profile {
   background-color: #ffffff;
   border-radius: 12px;
   padding: 2rem 2rem;
@@ -207,7 +207,7 @@ section h2::after {
   margin-top: 0.7rem; 
 }
 
-#about h3 {
+#profile h3 {
   margin-top: 1rem;
   margin-bottom: 0.8rem;
   font-size: 1.2rem;
@@ -257,14 +257,14 @@ section h2::after {
   padding-left: 10px;   /* コロンからのすき間 */
 }
 
-#about ul {
+#service ul {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 0.8rem;
 }
 
-#about li {
+#service li {
   background-color: #e8f5e9;
   padding: 0.5rem 1rem;
   border-radius: 20px;
