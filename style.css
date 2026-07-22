@@ -52,13 +52,6 @@ nav a {
   font-size: 0.95rem;
   transition: color 0.3s;
 }
-.hero-section {
-  background-image: url('ムハタ24‗ロゴ.jpg');
-  background-size: cover;    /* 領域全体を覆うように拡大縮小 */
-  background-position: center; /* 中央を基準にする */
-  padding: 60px 20px;
-  color: white;              /* 上に乗せる文字の色 */
-}
 
 nav a:hover {
   color: #3182ce;
@@ -69,9 +62,11 @@ nav a:hover {
 }
 
 /* 画像を使う場合 */
-.header-logo img {
-  height: 35px; /* 画像の高さをヘッダーに合わせる */
-  width: auto;
+.header-logo {
+  height: 40px;      /* ヘッダーに合わせた好みの高さ（例: 40px） */
+  width: auto;       /* 縦横比を崩さない */
+  object-fit: contain;
+  vertical-align: middle;
 }
 
 /* ==========================================
