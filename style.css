@@ -191,8 +191,8 @@ section h2::after {
   color: #ffffff;
 }
 /* narasu */
-.sus-horizontal-list a.btn-narasu:hover {
-  background: linear-gradient(45deg, #C3337C 0%, #C3337C 25%, #C3337C 50%, #C3337C 75%, #C3337C 100%);
+.sns-horizontal-list a.btn-narasu:hover {
+  background: linear-gradient(135deg, #7b2cbf 0%, #3a86ff 100%);
   color: #ffffff;
 }
 
