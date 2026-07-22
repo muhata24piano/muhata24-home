@@ -158,9 +158,9 @@ section h2::after {
 #link {
   background-color: #ffffff;
   border-radius: 12px;
-  padding: 3rem 2rem;
+  padding: 2rem 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 /* リスト全体を横並び（Flexbox）にする設定 */
