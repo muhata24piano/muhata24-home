@@ -16,7 +16,7 @@ html {
 section, 
 div[id] {
   /* 💡 ヘッダーの高さ＋少しの余白分だけ上方向にズラしてスクロールを止める */
-  scroll-margin-top: 90px; 
+  scroll-margin-top: 92px; 
 }
 body {
   font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
