@@ -62,7 +62,7 @@ nav a:hover {
    ========================================== */
 section:nth-of-type(1) {
   text-align: center;
-  padding: 5rem 1rem;
+  padding: 3rem 1rem;
   background: linear-gradient(135deg, #2b6cb0 0%, #4299e1 100%);
   color: #ffffff;
 }
