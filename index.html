@@ -5,19 +5,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ムハタ24のホーム</title>
+  <meta name="description" content="各SNSのリンクや活動内容について" />
 
   <!-- OGP（URLを貼った時のカード表示設定） -->
-  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ムハタ24のホーム" />
   <meta property="og:title" content="ムハタ24のホーム" />
   <meta property="og:description" content="各SNSのリンクや活動内容について" />
-  <meta property="og:url" content="https://muhata24-home.vercel.app" />
-  <meta property="og:image" content="https://muhata24-home.vercel.app/ogp.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://muhata24-home.vercel.app/" />
 
+  <meta property="og:image" content="https://muhata24-home.vercel.app/ogp.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ja_JP" />
   <!-- Twitter / X 用の設定 -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ムハタ24のホーム" />
   <meta name="twitter:description" content="各SNSのリンクや活動内容について" />
   <meta name="twitter:image" content="https://muhata24-home.vercel.app/ogp.png" />
+  <!-- 4. ファビコン（ブラウザのタブやスマホのブックマークアイコン） -->
+  <link rel="icon" href="https://muhata24-home.vercel.app/favicon.ico" />
+  <link rel="apple-touch-icon" href="https://muhata24-home.vercel.app/apple-touch-icon.png" />
 
   <!-- フォント読み込み -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -202,7 +210,7 @@
           }, 300);
         } else {
           // ローダーがない場合も最上部へリセット
-          window.scrollTo({ top: 0, behavior: "instant" });
+          window.scrollTo({top: 0, behavior: "instant"});
         }
       });
     }
