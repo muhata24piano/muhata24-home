@@ -37,7 +37,7 @@
 
   <!-- 1. ヘッダー -->
   <header>
-    <a href="#top" id="home-icon">
+    <a href="https://muhata24-home.vercel.app" id="home-icon">
       <img src="logo.jpg" alt="ホームへ戻るロゴ" class="header-logo" />
     </a>
     <div class="header-title">ムハタ24のホーム</div>
@@ -168,11 +168,12 @@
       }
     });
 
-    // ② ロゴクリック時：白幕を一度被せてから一瞬で最上部に戻す
+    // ② ロゴクリック時：白幕を被せてから指定URLへ遷移する
     const homeIcon = document.getElementById("home-icon");
     if (homeIcon) {
       homeIcon.addEventListener("click", function (e) {
-        e.preventDefault();
+        e.preventDefault(); // すぐのページ遷移をキャンセルしてアニメーションを優先
+        const targetUrl = this.href; // リンク先のURLを取得
         const loader = document.getElementById("page-loader");
 
         if (loader) {
@@ -180,21 +181,13 @@
           loader.style.pointerEvents = "auto";
           loader.classList.remove("loaded");
 
-          // ブラウザが「白幕を表示した」ことを認識したあとに最上部へ移動＆解除
+          // 白幕が完全に画面を覆うのを待ってからページを移動（0.3秒後）
           setTimeout(function () {
-            // 一瞬で画面最上部へスキップ
-            window.scrollTo({
-              top: 0,
-              behavior: "instant"
-            });
-
-            // 再び白幕を開ける
-            setTimeout(function () {
-              loader.classList.add("loaded");
-              loader.style.pointerEvents = "none";
-            }, 100);
-
-          }, 300); // 白幕が完全に覆うまでの待ち時間（0.3秒）
+            window.location.href = targetUrl;
+          }, 300);
+        } else {
+          // ローダーがない場合のフォールバック
+          window.location.href = targetUrl;
         }
       });
     }
