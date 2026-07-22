@@ -44,8 +44,8 @@ header {
   left: 50%;
   transform: translateX(-50%); /* 自身の幅の半分だけ左に戻して完璧な中央に */
   font-family: 'Shippori Mincho', serif;
-  font-weight: 700;
-  font-size: 1.4rem;
+  font-weight: 1000;
+  font-size: 1.5rem;
   color: #f8fff8;
   white-space: nowrap; /* 途中で改行させない */
 }
