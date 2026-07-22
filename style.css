@@ -67,7 +67,7 @@ header {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  font-family: 'Zen Kaku Gothic New', serif;
+  font-family: 'Noto Sans JP', serif;
   font-weight: 900;
   font-size: 1.4rem;
   letter-spacing: 1px;
