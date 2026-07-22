@@ -165,17 +165,32 @@
       }
     });
 
-    // ② ロゴ（アイコン）クリック時：一瞬でページの一番上（初期状態）に戻す
+    // ② ロゴ（アイコン）クリック時：白幕演出を挟んで一瞬で最上部（初期状態）に戻す
     const homeIcon = document.getElementById("home-icon");
     if (homeIcon) {
       homeIcon.addEventListener("click", function (e) {
-        e.preventDefault(); // URLに #top が付くのを防ぐ
+        e.preventDefault(); // 通常のページ遷移やスクロールをキャンセル
 
-        // スムーズ移動を無効化し、一瞬で最上部（0px）へ移動
-        window.scrollTo({
-          top: 0,
-          behavior: "instant"
-        });
+        const loader = document.getElementById("page-loader");
+        if (loader) {
+          // 1. 白い幕をふわっと覆う（画面を白くする）
+          loader.classList.remove("loaded");
+
+          // 2. 白く隠れたタイミング（0.3秒後）で最上部へ移動 & 再び白幕を明かす
+          setTimeout(function () {
+            // 一瞬で画面最上部（0px）へリセット
+            window.scrollTo({
+              top: 0,
+              behavior: "instant"
+            });
+
+            // 3. 白い幕をフェードアウトさせてページを表示
+            setTimeout(function () {
+              loader.classList.add("loaded");
+            }, 100);
+
+          }, 300); // 白幕が完全に覆うまでの時間
+        }
       });
     }
   </script>
