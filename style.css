@@ -424,7 +424,10 @@ footer::before {
     justify-content: center;
     gap: 1.5rem;
   }
-
+  .hero-section {
+    padding: 4rem 1rem;
+  }
+  
   .hero-section h1 {
     font-size: 1.6rem;
   }
