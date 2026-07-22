@@ -14,7 +14,7 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #ffffff;
+  background-color: #fafffa;
   z-index: 9999;
   opacity: 1;
   visibility: visible;
@@ -44,7 +44,7 @@ body {
   font-family: 'Noto Serif JP', 'Times New Roman', serif;
   line-height: 1.7;
   color: #002200;
-  background-color: #f1fff1;
+  background-color: #fafffa;
 }
 
 /* ==========================================
@@ -104,7 +104,7 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #f9fff9;
+  color: #fafffa;
   font-weight: 600;
   font-size: 0.95rem;
   transition: color 0.3s;
@@ -134,7 +134,7 @@ nav a:hover {
   text-align: center;
   padding: 3rem 1rem;
   background: linear-gradient(135deg, #1b4d3e 0%, #2d6a4f 100%);
-  color: #ffffff;
+  color: #fafffa;
   border-radius: 0 0 20px 20px;
 }
 
@@ -182,7 +182,7 @@ section h2::after {
    5. Link セクション
    ========================================== */
 #link {
-  background-color: #ffffff;
+  background-color: #fafffa;
   border-radius: 12px;
   padding: 1.5rem 2rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
@@ -251,7 +251,7 @@ section h2::after {
    6. Service
    ========================================== */
 #service {
-  background-color: #ffffff;
+  background-color: #fafffa;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
@@ -278,7 +278,7 @@ section h2::after {
    7. Profile
    ========================================== */
 #profile {
-  background-color: #ffffff;
+  background-color: #fafffa;
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
