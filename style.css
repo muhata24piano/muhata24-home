@@ -352,7 +352,7 @@ footer::before {
     transform: none;
     font-size: 1.1rem; /* スマホ用に少し文字サイズを調整 */
     text-align: left;
-    flex: 1; /* ロゴの横のスペースを埋める */
+    flex: 5; /* ロゴの横のスペースを埋める */
     margin-left: 0.8rem; /* ロゴとの間のすき間 */
   }
 
