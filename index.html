@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ムハタ24のホーム</title>
+
     <!-- OGP（URLを貼った時のカード表示設定） -->
     <meta property="og:type" content="website" />
     <meta property="og:title" content="ムハタ24のホーム" />
@@ -15,14 +16,13 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="ムハタ24のホーム" />
     <meta name="twitter:description" content="リンク集を置いています" />
-    <meta
-      name="twitter:image"
-      content="https://muhata24-home.vercel.app/ogp.png"
-    />
+    <meta name="twitter:image" content="https://muhata24-home.vercel.app/ogp.png" />
 
+    <!-- フォント読み込み -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Shippori+Mincho:wght@500;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css" />
     <!-- Font Awesome (アイコン用CDN) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
@@ -37,19 +37,18 @@
       <a href="index.html" id="home-icon">
         <img src="logo.jpg" alt="ホームへ戻るロゴ" class="header-logo" />
       </a>
-      <h1>ムハタ24のホーム</h1>
+      <div class="header-title">ムハタ24のホーム</div>
       <nav>
         <ul>
           <li><a href="#link">Link</a></li>
           <li><a href="#service">Service</a></li>
           <li><a href="#profile">Profile</a></li>
-          <!--<li><a href="#contact">Contact</a></li> -->
         </ul>
       </nav>
     </header>
 
     <!-- 2. メインビジュアル -->
-    <section>
+    <section class="hero-section">
       <h1>Welcome to My Activity Site</h1>
       <p>クリエイターとしての活動場所や作品をまとめています。</p>
     </section>
@@ -59,67 +58,28 @@
       <h2>Links</h2>
       <div class="link-container">
         <ul class="sns-horizontal-list">
-          <!-- YouTube -->
           <li>
-            <a
-              href="https://www.youtube.com/@muhata24piano"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-youtube"
-              aria-label="YouTube"
-            >
+            <a href="https://www.youtube.com/@muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-youtube" aria-label="YouTube">
               <i class="fa-brands fa-youtube"></i>
             </a>
           </li>
-
-          <!-- X (旧Twitter) -->
           <li>
-            <a
-              href="https://x.com/muhata24"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-x"
-              aria-label="X (Twitter)"
-            >
+            <a href="https://x.com/muhata24" target="_blank" rel="noopener noreferrer" class="btn-x" aria-label="X (Twitter)">
               <i class="fa-brands fa-x-twitter"></i>
             </a>
           </li>
-
-          <!-- TikTok -->
           <li>
-            <a
-              href="https://tiktok.com/@muhata24"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-tiktok"
-              aria-label="TikTok"
-            >
+            <a href="https://tiktok.com/@muhata24" target="_blank" rel="noopener noreferrer" class="btn-tiktok" aria-label="TikTok">
               <i class="fa-brands fa-tiktok"></i>
             </a>
           </li>
-
-          <!-- Instagram -->
           <li>
-            <a
-              href="https://instagram.com/muhata24piano"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-insta"
-              aria-label="Instagram"
-            >
+            <a href="https://instagram.com/muhata24piano" target="_blank" rel="noopener noreferrer" class="btn-insta" aria-label="Instagram">
               <i class="fa-brands fa-instagram"></i>
             </a>
           </li>
-
-          <!-- narasu -->
           <li>
-            <a
-              href="https://narasu.jp/client/static/artists/25810"
-              target="_blank"
-              rel="noopener norefeffer"
-              class="btn-narasu"
-              aria-label="narasu"
-            >
+            <a href="https://narasu.jp/client/static/artists/25810" target="_blank" rel="noopener noreferrer" class="btn-narasu" aria-label="narasu">
               <i class="fa-solid fa-music"></i>
             </a>
           </li>
@@ -127,6 +87,7 @@
       </div>
     </section>
 
+    <!-- 4. Service -->
     <section id="service">
       <h2>Service</h2>
       <ul>
@@ -145,7 +106,7 @@
       </ul>
     </section>
 
-    <!-- 4. About Me (自己紹介 & スキル) -->
+    <!-- 5. Profile -->
     <section id="profile">
       <h2>Profile</h2>
       <dl class="profile-list">
@@ -181,37 +142,29 @@
       </ul>
     </section>
 
-    <!-- 5. フッター -->
+    <!-- 6. フッター -->
     <footer>
       <p>&copy; 2026 muhata24. All rights reserved.</p>
     </footer>
 
-    <!-- ==========================================
-       JavaScript（画面制御）
-       ========================================== -->
     <script>
-      // ① ページ読み込み完了時：白幕を透明（フェードアウト）にする
       window.addEventListener("load", function () {
         const loader = document.getElementById("page-loader");
         if (loader) {
           setTimeout(function () {
             loader.classList.add("loaded");
-          }, 150); // 0.15秒待ってからフェードアウト
+          }, 150);
         }
       });
 
-      // ② ロゴ（アイコン）クリック時：画面を真っ白に戻してからリロードする
       const homeIcon = document.getElementById("home-icon");
       if (homeIcon) {
         homeIcon.addEventListener("click", function (e) {
-          e.preventDefault(); // 通常の移動をキャンセル
-
+          e.preventDefault();
           const loader = document.getElementById("page-loader");
           if (loader) {
-            loader.classList.remove("loaded"); // 白幕を復活（画面を白くする）
+            loader.classList.remove("loaded");
           }
-
-          // 白くなったのを確認してからリロードを実行
           setTimeout(function () {
             window.location.reload();
           }, 200);
