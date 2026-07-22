@@ -197,7 +197,7 @@ section h2::after {
 }
 
 /* ==========================================
-   5. About Me (自己紹介 & スキル)
+   5. profile (自己紹介 & スキル)
    ========================================== */
 #profile {
   background-color: #ffffff;
@@ -272,6 +272,9 @@ section h2::after {
   color: #1b4d3e;
 }
 
+/* ==========================================
+   5. Service
+   ========================================== */
 #service {
   background-color: #ffffff;
   border-radius: 12px;
