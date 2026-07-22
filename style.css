@@ -10,7 +10,14 @@
 html {
   scroll-behavior: smooth; /* スムーススクロール */
 }
-
+/* ==========================================
+   ページ内リンク（目次）の飛び先位置調整
+   ========================================== */
+section, 
+div[id] {
+  /* 💡 ヘッダーの高さ＋少しの余白分だけ上方向にズラしてスクロールを止める */
+  scroll-margin-top: 80px; 
+}
 body {
   font-family: 'Helvetica Neue', Arial, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, sans-serif;
   line-height: 1.7;
