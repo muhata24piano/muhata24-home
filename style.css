@@ -257,6 +257,34 @@ section h2::after {
   padding-left: 10px;   /* コロンからのすき間 */
 }
 
+#profile ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+#profile li {
+  background-color: #e8f5e9;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #1b4d3e;
+}
+
+#service {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 2rem 2rem;
+  box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.1);
+  margin-top: 0.7rem; 
+}
+#service h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+  color: #2b6cb0;
+}
 #service ul {
   list-style: none;
   display: flex;
