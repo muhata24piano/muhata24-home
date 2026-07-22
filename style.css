@@ -75,7 +75,7 @@ nav a:hover {
    ========================================== */
 section:nth-of-type(1) {
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem;
   /* 深い緑から少し鮮やかな緑への美しいグラデーション */
   background: linear-gradient(135deg, #1b4d3e 0%, #2d6a4f 100%);
   color: #ffffff;
@@ -222,11 +222,11 @@ section h2::after {
 }
 
 #about li {
-  background-color: #edf2f7;
+  background-color: #e8f5e9;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
-  color: #4a5568;
+  color: #1b4d3e;
 }
 
 footer {
