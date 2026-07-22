@@ -63,8 +63,8 @@ nav a:hover {
 
 /* 画像を使う場合 */
 .header-logo {
-  width: 45px;         /* 幅（お好みのサイズに調整してください） */
-  height: 45px;        /* 高さ（幅と同じ数値にして正方形にする） */
+  width: 50px;         /* 幅（お好みのサイズに調整してください） */
+  height: 50px;        /* 高さ（幅と同じ数値にして正方形にする） */
   border-radius: 50%;  /* 完全な丸にする */
   object-fit: cover;   /* 画像が歪まないように中央で綺麗に切り抜く */
   vertical-align: middle;
