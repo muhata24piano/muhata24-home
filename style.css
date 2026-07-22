@@ -134,9 +134,9 @@ nav a:hover {
 .hero-section {
   position: relative;
   text-align: center;
-  padding: 5rem 1rem;
+  /* 💡 PC用：上下の余白を8remに広げて縦軸をゆったり見せる */
+  padding: 8rem 1.5rem;
   
-  /* 💡 0.99 を 0.55 に変更して、後ろの piano.png をしっかり透けさせます */
   background: linear-gradient(
       rgba(27, 77, 62, 0.55), 
       rgba(15, 45, 36, 0.65)
