@@ -190,6 +190,11 @@ section h2::after {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #ffffff;
 }
+/* narasu */
+.sus-horizontal-list a.btn-narasu:hover {
+  background: linear-gradient(45deg, #C3337C 0%, #C3337C 25%, #C3337C 50, #C3337C 75%, #C3337C 100%);
+  color: #ffffff;
+}
 
 /* ==========================================
    5. About Me (自己紹介 & スキル)
