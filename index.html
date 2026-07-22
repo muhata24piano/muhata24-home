@@ -21,8 +21,9 @@
   <!-- Font Awesome (アイコン用CDN) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
 
+<body>
+  <div id="page-loader"></div>
   <!-- 1. ヘッダー -->
   <header>
     <a href="index.html" id="home-icon">
@@ -38,11 +39,16 @@
       </ul>
     </nav>
     <script>
-  document.getElementById('home-icon').addEventListener('click', function(e) {
-    e.preventDefault();     // デフォルトのページ移動をキャンセル
-    window.location.reload(); // ページをリロード（再読み込み）する
-  });
-</script>
+    document.getElementById('home-icon').addEventListener('click', function(e) {
+      e.preventDefault();
+      // 画面を白く戻す（幕を表示）
+      document.getElementById('page-loader').classList.remove('loaded');
+      // 少し待ってからリロード（白さを体感させるため）
+      setTimeout(function() {
+        window.location.reload();
+      }, 100);
+    });
+  </script>
   </header>
 
   <!-- 2. メインビジュアル -->

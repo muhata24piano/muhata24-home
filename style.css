@@ -307,3 +307,26 @@ footer {
     padding: 2rem 1.2rem;
   }
 }
+/* ==========================================
+   9. リロード時のフェードイン演出
+   ========================================== */
+
+/* ページ全体を覆う真っ白な幕 */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff; /* 完全な白 */
+  z-index: 9999;           /* 全ての要素（ヘッダー含む）の上に配置 */
+  opacity: 1;              /* 初期状態は不透明 */
+  visibility: visible;
+  transition: opacity 0.5s ease, visibility 0.5s ease; /* 0.5秒かけて変化 */
+}
+
+/* 読み込み完了後にJSで付与するクラス（フェードアウトさせる） */
+#page-loader.loaded {
+  opacity: 0;              /* 透明にする */
+  visibility: hidden;      /* クリックなどを通すようにする */
+}
