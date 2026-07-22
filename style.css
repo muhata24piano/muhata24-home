@@ -7,13 +7,36 @@
   padding: 0;
 }
 
+/* ページ全体を覆う真っ白な幕 */
+#page-loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 9999;
+  opacity: 1;
+  visibility: visible;
+  /* 💡 opacity と visibility の両方に transition をかける */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+  /* 読み込み後はクリックを邪魔しない */
+}
+
+/* 読み込み完了後に白幕を透明にする */
+#page-loader.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-section, 
+section,
 div[id] {
-  scroll-margin-top: 92px; 
+  scroll-margin-top: 92px;
 }
 
 /* 全体のフォントを Noto Serif JP に設定 */
@@ -49,14 +72,16 @@ header {
   font-size: 1.4rem;
   letter-spacing: 1px;
   color: #f8fff8;
-  white-space: nowrap; /* 途中で改行させない */
+  white-space: nowrap;
+  /* 途中で改行させない */
 }
 
 /* ロゴの囲みエリア */
 #home-icon {
   display: flex;
   align-items: center;
-  z-index: 2; /* タイトルより前面に配置 */
+  z-index: 2;
+  /* タイトルより前面に配置 */
 }
 
 .header-logo {
@@ -196,17 +221,27 @@ section h2::after {
   border-color: transparent;
 }
 
-.sns-horizontal-list a.btn-youtube:hover { background-color: #ff0000; color: #ffffff; }
-.sns-horizontal-list a.btn-x:hover { background-color: #000000; color: #ffffff; }
+.sns-horizontal-list a.btn-youtube:hover {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+.sns-horizontal-list a.btn-x:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
 .sns-horizontal-list a.btn-tiktok:hover {
   background-color: #000000;
   color: #ffffff;
-  box-shadow: -2px 2px 0 #00f2fe, 2px -2px 0 #fe2c55; 
+  box-shadow: -2px 2px 0 #00f2fe, 2px -2px 0 #fe2c55;
 }
+
 .sns-horizontal-list a.btn-insta:hover {
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   color: #ffffff;
 }
+
 .sns-horizontal-list a.btn-narasu:hover {
   background: linear-gradient(45deg, #f94a97 0%, #d63ab7 25%, #a238ae 50%, #7367dd 75%, #4497fb 100%);
   color: #ffffff;
@@ -220,7 +255,7 @@ section h2::after {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 #service ul {
@@ -247,7 +282,7 @@ section h2::after {
   border-radius: 12px;
   padding: 2rem;
   box-shadow: 0 0 4px 3px rgba(0, 0, 0, 0.05);
-  margin-top: 1rem; 
+  margin-top: 1rem;
 }
 
 #profile h3 {
@@ -340,7 +375,8 @@ footer::before {
    ========================================== */
 @media (max-width: 600px) {
   header {
-    flex-wrap: wrap; /* 要素が入り切らない場合に折り返す */
+    flex-wrap: wrap;
+    /* 要素が入り切らない場合に折り返す */
     justify-content: space-between;
     padding: 0.8rem 1rem;
     gap: 0.6rem;
@@ -350,10 +386,13 @@ footer::before {
   .header-title {
     position: static;
     transform: none;
-    font-size: 1.1rem; /* スマホ用に少し文字サイズを調整 */
+    font-size: 1.1rem;
+    /* スマホ用に少し文字サイズを調整 */
     text-align: left;
-    flex: 10; /* ロゴの横のスペースを埋める */
-    margin-left: 0rem; /* ロゴとの間のすき間 */
+    flex: 10;
+    /* ロゴの横のスペースを埋める */
+    margin-left: 0rem;
+    /* ロゴとの間のすき間 */
   }
 
   /* ナビゲーション（Link, Service, Profile）を2行目に中央配置 */

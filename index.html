@@ -156,40 +156,43 @@
   </footer>
 
   <script>
-    /*window.addEventListener("load", function () {
+    // ① ページ読み込み完了時：白幕を透明（フェードアウト）にする
+    window.addEventListener("load", function () {
       const loader = document.getElementById("page-loader");
       if (loader) {
         setTimeout(function () {
           loader.classList.add("loaded");
         }, 150);
       }
-    });*/
+    });
 
-    // ② ロゴ（アイコン）クリック時：白幕演出を挟んで一瞬で最上部（初期状態）に戻す
+    // ② ロゴクリック時：白幕を一度被せてから一瞬で最上部に戻す
     const homeIcon = document.getElementById("home-icon");
     if (homeIcon) {
       homeIcon.addEventListener("click", function (e) {
-        e.preventDefault(); // 通常のページ遷移やスクロールをキャンセル
-
+        e.preventDefault();
         const loader = document.getElementById("page-loader");
+
         if (loader) {
-          // 1. 白い幕をふわっと覆う（画面を白くする）
+          // 白幕のクリック透過を一時的に解除して真っ白にする
+          loader.style.pointerEvents = "auto";
           loader.classList.remove("loaded");
 
-          // 2. 白く隠れたタイミング（0.3秒後）で最上部へ移動 & 再び白幕を明かす
+          // ブラウザが「白幕を表示した」ことを認識したあとに最上部へ移動＆解除
           setTimeout(function () {
-            // 一瞬で画面最上部（0px）へリセット
+            // 一瞬で画面最上部へスキップ
             window.scrollTo({
               top: 0,
               behavior: "instant"
             });
 
-            // 3. 白い幕をフェードアウトさせてページを表示
+            // 再び白幕を開ける
             setTimeout(function () {
               loader.classList.add("loaded");
+              loader.style.pointerEvents = "none";
             }, 100);
 
-          }, 300); // 白幕が完全に覆うまでの時間
+          }, 300); // 白幕が完全に覆うまでの待ち時間（0.3秒）
         }
       });
     }
