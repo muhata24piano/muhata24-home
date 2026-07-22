@@ -138,8 +138,8 @@ nav a:hover {
   
   /* 💡 画像の上に暗めのグラデーションを重ねて文字を見やすくする */
   background: linear-gradient(
-      rgba(27, 77, 62, 0.99), 
-      rgba(15, 45, 36, 0.99)
+      rgba(27, 77, 62, 0.5), 
+      rgba(15, 45, 36, 0.5)
     ), 
     url('piano.png') center/cover no-repeat;
     
