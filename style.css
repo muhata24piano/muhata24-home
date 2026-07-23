@@ -301,7 +301,7 @@ section h2::after {
   display: inline-block;
   padding: 16px 40px;
   background-color: #007200; /* ボタンの色（自由に変更してください） */
-  color: #ddffdd;            /* 文字の色 */
+  color: #f5fff5;            /* 文字の色 */
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;     /* 下線を消す */
@@ -331,7 +331,7 @@ section h2::after {
   margin-top: 1.5rem;
   margin-bottom: 0.8rem;
   font-size: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
-  color: #1b773e;
+  color: #224422;
   text-align: center;
 }
 
