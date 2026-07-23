@@ -178,7 +178,7 @@ section h2 {
   font-weight: 700;
   font-size: clamp(1.25rem, 1.1rem + 0.8vw, 1.75rem);
   text-align: center;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: #224422;
   position: relative;
 }
@@ -325,6 +325,7 @@ section h2::after {
   padding: 1rem;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 #profile h3 {
