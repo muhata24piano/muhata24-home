@@ -138,8 +138,8 @@ nav a:hover {
   padding: 8rem 1.5rem;
   
   background: linear-gradient(
-      rgba(27, 77, 62, 0.55), 
-      rgba(15, 45, 36, 0.65)
+      rgba(27, 77, 62, 0.5), 
+      rgba(15, 45, 36, 0.6)
     ), 
     url('piano.png') center/cover no-repeat;
     
