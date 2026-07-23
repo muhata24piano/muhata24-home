@@ -325,7 +325,7 @@ section h2::after {
   padding: 1rem;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10rem;
 }
 
 #profile h3 {
