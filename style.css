@@ -300,8 +300,8 @@ section h2::after {
 .contact-btn {
   display: inline-block;
   padding: 16px 40px;
-  background-color: #1b4d3e; /* ボタンの色（自由に変更してください） */
-  color: #ddffcc;            /* 文字の色 */
+  background-color: #006400; /* ボタンの色（自由に変更してください） */
+  color: #ddffdd;            /* 文字の色 */
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;     /* 下線を消す */
@@ -311,7 +311,7 @@ section h2::after {
 }
 /* ホバー（マウスを載せたとき）のエフェクト */
 .contact-btn:hover {
-  background-color: #0056b3; /* 少し濃い青に変更 */
+  background-color: #008000; /* 少し濃い青に変更 */
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
