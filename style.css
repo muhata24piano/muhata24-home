@@ -44,7 +44,7 @@ body {
   font-family: 'Noto Serif JP', 'Times New Roman', serif;
   line-height: 1.7;
   color: #002200;
-  background-color: #eeffee;
+  background-color: #eeffdd;
   font-size: clamp(0.875rem, 0.8rem + 0.4vw, 1.05rem);
 }
 
@@ -56,7 +56,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background-color: #007200;
+  background-color: #006400;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
