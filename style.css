@@ -276,7 +276,6 @@ section h2::after {
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
 }
-
 #service ul {
   list-style: none;
   display: flex;
@@ -284,13 +283,37 @@ section h2::after {
   gap: 0.8rem;
   justify-content: center;
 }
-
 #service li {
   background-color: #e8f5e9;
   padding: 0.5rem 1rem;
   border-radius: 20px;
   font-size: 0.9rem;
   color: #1b4d3e;
+}
+
+/* ボタンの外枠位置調整 */
+.contact-btn-wrapper {
+  text-align: center;
+  margin: 40px 0;
+}
+/* ボタン本体のデザイン */
+.contact-btn {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: #007bff; /* ボタンの色（自由に変更してください） */
+  color: #ffffff;            /* 文字の色 */
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;     /* 下線を消す */
+  border-radius: 8px;        /* 角の丸み */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+/* ホバー（マウスを載せたとき）のエフェクト */
+.contact-btn:hover {
+  background-color: #0056b3; /* 少し濃い青に変更 */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* ==========================================
