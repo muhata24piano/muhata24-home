@@ -274,7 +274,7 @@ section h2::after {
   border-radius: 12px;
   padding: 1rem;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 #service ul {
   list-style: none;
@@ -322,7 +322,7 @@ section h2::after {
 #profile {
   background-color: #fafffa;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.25);
   margin-top: 1rem;
 }
