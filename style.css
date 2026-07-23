@@ -300,8 +300,8 @@ section h2::after {
 .contact-btn {
   display: inline-block;
   padding: 16px 40px;
-  background-color: #007bff; /* ボタンの色（自由に変更してください） */
-  color: #ffffff;            /* 文字の色 */
+  background-color: #1b4d3e; /* ボタンの色（自由に変更してください） */
+  color: #ddffcc;            /* 文字の色 */
   font-size: 18px;
   font-weight: bold;
   text-decoration: none;     /* 下線を消す */
